@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" data-dark >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest-Countries</title>
+    <link href="https: //fonts.googleapis.com/css2? familia= Nunito+Sans:wght@300;600;800 &family= Raleway:wght@400;700 & family= Roboto:wght@400;700 & display=swap" rel="hoja de estilo"></link>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/table.css" media="(min-width: 500px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 800px)">
+
+</head>
+<body data-dark >
+    <div class="pages">
+        <header class="header element-api">
+            <h1 class="title">Where in the world?</h1>
+            <button class="theme element-api" id="theme" >Dark mode</button>
+        </header>      
+        <div class="container">
+            <nav class="navbar">
+                <label for="search"><ion-icon name="search-outline"></ion-icon></label>
+                <input name="search-span" type="text" class="search element-light" autocomplete="off" title="Search engine only accepts letters and blank spaces." id="search" placeholder="← Search for a country..." required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúüÜ\s]+$">
+                <label for="Select-filter"></label>
+                <select name="primary" id="select-filter" class="select-filter element-light" >
+                    <option value="" disabled selected hidden class="filter">Filter by Region</option>
+                    <option value="">All</option>
+                    <option value="americas">Americas</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </nav>
+            <main class="main">
+                <section class="grid grid-fluid" id="countries">
+                </section>
+                <template class="template" id="template">
+                    <div class="card element-api">
+                        <img class= "img"src="" alt="">
+                        <h3 class="name"></h3>
+                        <div class="contain-date"><b>Population:</b><p class="date population"></p></div>
+                        <div class="contain-date"><b>Region:</b><p class="date region"></p></div>
+                        <div class="contain-date"><b>Capital:</b><p class="date capital"></p></div></b>
+                        <div class="face-front" data-code=""></div>
+                    </div>
+                </template>
+            </main>
+        </div>
+        <section class="modal" data-dark></section>
+        <template class="template-modal" id="template-modal">
+            <button class="back element-api" data-dark>← Back</button>
+            <img class="image-modal" src="" alt="">
+            <section class="details">
+                <h3 class="name-modal"></h3>
+                <div class="details-1">
+                    <div class="contain-date contain-modal"><b>Native Name:</b><p class="date native-name-modal"></p></div>
+                    <div class="contain-date contain-modal"><b>Population:</b><p class="date population-modal"></p></div>
+                    <div class="contain-date contain-modal"><b>Region:</b><p class="date region-modal"></p></div>
+                    <div class="contain-date contain-modal"><b>Sub Region:</b><p class="date sub-region-modal"></p></div>
+                    <div class="contain-date contain-modal"><b>Capital:</b><p class="date capital-modal"></p></div></b>
+                </div>
+                <br>
+                <br>
+                <div class="details-2">
+                    <div class="contain-date contain-modal"><b>Top Level Domain:</b><p class="date top-level-modal"></p></div></b>
+                    <div class="contain-date contain-modal"><b>Currencies:</b><p class="Currencies"></p></div></b>
+                    <div class="contain-date contain-modal"><b>Languagues:</b><p class="languages"></p></div></b>
+                </div>
+            </section>
+        </template> 
+        <section class="border-countries"></section>
+        <template class="template-border" id="template-border">
+            <h4>Border Countries:</h4> 
+            <div class="container-button-border">
+                <button class="button-border button-left element-api" data-code=""></button>
+                <button class="button-border button-center element-api" data-code=""></button>
+                <button class="button-border button-right element-api" data-code=""></button>
+            </div>
+        </template>
+    </div>
+    <script src="./index.js" ></script>
+</body>
+</html>

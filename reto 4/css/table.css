@@ -1,0 +1,6 @@
+.modal{
+    transform: translateX(-850px);
+}
+.modalisactive{
+    transform: translateX(0);
+}
